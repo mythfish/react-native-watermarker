@@ -7,7 +7,6 @@ import android.graphics.BitmapFactory.Options;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Canvas;
-import android.net.Uri;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
@@ -117,8 +116,7 @@ public class RNWatermarkerModule extends ReactContextBaseJavaModule {
     }
 
     response = Arguments.createMap();
-    Uri uri = Uri.fromFile(f);
-    response.putString("uri", uri.toString());
+    response.putString("path", f.getAbsolutePath());
     callback.invoke(response);
     return;
   }
