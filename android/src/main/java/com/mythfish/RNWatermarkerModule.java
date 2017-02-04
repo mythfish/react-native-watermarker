@@ -88,7 +88,7 @@ public class RNWatermarkerModule extends ReactContextBaseJavaModule {
     paint.setTextSize(size);
     paint.setAntiAlias(true);
     paint.setUnderlineText(underline);
-    canvas.drawText(watermark, x, y, paint);
+    canvas.drawText(watermark,  x < 0 ? w + x : x, y < 0 ? h + y : y, paint);
 
     // Save Bitmap to file
     ByteArrayOutputStream bytes = new ByteArrayOutputStream();
