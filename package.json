@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "nativePackage": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,10 +12,5 @@
     "react-native"
   ],
   "author": "",
-  "license": "",
-  "peerDependencies": {
-    "react-native": "^0.29.0",
-    "react-native-windows": "^0.29.0"
-
-  }
+  "license": ""
 }
